@@ -1,0 +1,133 @@
+.sectionAboutMe{
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+
+.card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .card-body{
+        width: 50%;
+        padding: 1em;
+        background-color: rgb(54, 54, 54);
+        color: white;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        filter: drop-shadow(2px 2px 5px $primary);
+    }
+    .img-progress-container{
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        img{
+            width: 200px;
+            border-radius: 10px;
+            border: 6px solid $default;
+            filter: drop-shadow(2px 2px 5px $default);
+        }
+        .progress-container{
+            margin: 1em;
+            margin-top: 0px;
+            padding: 0.5em;
+        }
+    }
+    .text-container{
+        padding: 0.5em;
+        background-color: rgb(75, 75, 75);
+        border-radius: 10px;
+        filter: drop-shadow(0px 0px 4px $default);
+        margin: 1em;
+        text-align: center;
+    }
+}
+
+.progress{
+    width: 14em;
+    height: 1.5em;
+    filter: drop-shadow(0px 0px 5px $default);
+    border: 4px solid $default;
+    border-radius: 1.5em;
+    background-color: rgba(181, 204, 255, 0.1);
+    color: white;
+    padding: 0.2em;
+}
+.progress::before{
+    content: attr(value);
+    background-image: linear-gradient(to right, $default, $primary);
+    display: flex;
+    border-radius: 0.8em;
+    justify-content: center;
+    max-width: calc(100% - 1em);
+    width: calc(var(--width, 0) * 1%);
+}
+
+h4,
+h3{
+    opacity: 0.7;
+}
+
+#btn-hide{
+    display: none;
+}
+
+.text-button-hide{
+    color: $default;
+    text-shadow: 0px 0px 10px $default;
+}
+
+@media screen and (max-width:760px) {
+    .card
+    .img-progress-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width:1000px) {
+    .card
+    .img-progress-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .card-body{
+        min-width: 300px;
+    }
+}
+
+@media screen and (max-width:500px) {
+    .card
+    .img-progress-container
+    .progress-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    img{
+        max-width: 140px;
+    }
+    .progress{
+        max-width: 200px;
+    }
+    .card-body{
+        min-width: 300px;
+    }
+    #btn-hide{
+        display: block;
+        border: none;
+        background-color: transparent;
+        color: white;
+        cursor: pointer;
+    }
+    .text-container{
+        display: none;
+    }
+}

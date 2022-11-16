@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
+
+$font-stack: 'Poppins', sans-serif;
+
+$default: #5887df;
+$primary: #5a1ac7;
+$secondary: #830eb1;
+$tertiary: #e66d13;
+
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: $font-stack;
+    background-color: rgb(61, 61, 61);
+}
+
+:root{
+    scroll-behavior: smooth;
+}
+
+@import "navbar";
+@import "sectionhero";
+@import "aboutme";
+@import "portfolio";
+@import "contacts";
+@import "footer";

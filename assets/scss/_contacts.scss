@@ -1,0 +1,57 @@
+.title-section{
+    margin-bottom: 1em;
+    color: white;
+    text-align: center;
+}
+
+.container-contacts{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.input-email{
+    margin-top: 5px;
+    padding: 1em;
+    width: 600px;
+    border-radius: 10px;
+    border: none;
+    &:hover{
+        filter: drop-shadow(4px 4px 10px $secondary);
+
+    }
+}
+
+textarea{
+    margin-top: 5px;
+    padding: 1em;
+    width: 600px;
+    border-radius: 10px;
+    border: none;
+    &:hover{
+        filter: drop-shadow(4px 4px 10px $secondary);
+
+    }
+}
+
+.btn-submit{
+    font-family: $font-stack;
+    font-weight: 500;
+    font-size: medium;
+    width: 20%;
+    padding: 10px;
+    margin-top: 5px;
+}
+
+@media screen and (max-width: 500px) {
+  .input-email{
+    width: 300px;
+  }
+  textarea{
+    width: 300px;
+  }
+  .btn-submit{
+    width: 100px;
+  }
+}

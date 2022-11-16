@@ -1,0 +1,132 @@
+.navbar{ 
+    position: fixed;
+    top: 0;
+    width: 100%;
+    box-shadow: 5px 5px 40px rgba(61, 61, 61, 0.351);
+    background-color: rgb(255, 255, 255);
+    padding: 20px;
+    display: flex;
+    flex-direction: row wrap;
+    justify-content: space-around;
+    z-index: 1;
+
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        li {
+         display: inline;
+         padding: 10px;
+         transition-duration: 0.6s;
+        }
+        li:hover{
+            border: 2.5px solid $default;
+            box-shadow: 2px 4px 10px #6499fc82;
+            border-radius: 40px;
+            transition: 0.2s;
+        }
+        li:active{
+            border: none;
+            box-shadow: none;
+            background-image: linear-gradient( to right, #5887dfad, #830eb1ab);
+        }
+        a {
+        font-weight: 500;
+        color: black;
+        margin: 10px;
+        text-decoration: none;
+        text-align: center;
+        }
+        a:hover{
+        color:$default;
+        &:active{
+            color: white;
+        }
+        }
+    }
+
+    .navbar-brand {
+        font-weight: 500;
+        color: $primary;
+        text-decoration: none;
+    }
+}
+
+.burger{
+    display: none;
+    cursor: pointer;
+}
+
+.burger div{
+    top: 35%;
+    width: 25px;
+    height: 3px;
+    box-shadow: 2px 2px 10px #acc8fd2a;
+    background-image: linear-gradient( to right, $default, $secondary);
+    border-radius: 10px;
+    position: absolute;
+    transition: transform 0.4s;
+}
+
+.bar-1{
+    margin-bottom: 5px;
+}
+
+.bar-2{
+    margin-top: 7.4px;
+}
+
+.bar-3{
+    margin-top: 15px;
+}
+
+.burger.active {
+    top: 50%;
+    position: relative;
+    transition: transform 0.6s;
+    .bar-1{
+        transform: rotate(-315deg);
+    }
+    .bar-2{
+        opacity: 0;
+    }
+    .bar-3{
+        transform: rotatez(-225deg);
+        margin-top: 50%;
+    }
+}
+
+@media screen and (max-width:760px) {
+    body{
+        overflow-x: hidden;
+    }
+    .navbar-nav{
+        position: fixed;
+        right: 0%;
+        height: 40vh;
+        top: 6.6vh;
+        border-radius: 0px 0px 10px 10px;
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content:baseline;
+        align-items: center;
+        width: 40%;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
+    }
+    .navbar-nav li{
+        padding: 0;
+        margin: 20px;
+        opacity: 1;
+    }
+    .burger{
+        display: block;
+    }
+}
+
+.navbar-nav.active{
+    right: 40%;
+    transition: right 0.5s;
+    transform: translateX(100%);
+}
