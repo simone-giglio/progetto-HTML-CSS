@@ -1,10 +1,17 @@
-//hamburger-menu
+//hamburger-menu//
 const burgerMenu = document.querySelector(".burger");
 const navbarMenu = document.querySelector(".navbar-nav");
+const navLink = document.querySelectorAll(".nav-link");
 burgerMenu.addEventListener("click", () => {
     burgerMenu.classList.toggle("active");
     navbarMenu.classList.toggle("active");
     });
+for(let i = 0; i < navLink.length; i++) {
+    navLink[i].addEventListener("click", () => {
+          burgerMenu.classList.remove("active");
+          navbarMenu.classList.remove("active");
+    });
+};
 //logo-animation//
 const logo = document.querySelectorAll("#logo-path");
 for(let i = 0; i<logo.length; i++){

@@ -11,6 +11,10 @@ body {
   scroll-behavior: smooth;
 }
 
+:target {
+  scroll-margin-top: 84px;
+}
+
 .navbar {
   position: fixed;
   top: 0;
@@ -113,8 +117,8 @@ body {
   }
   .navbar-nav {
     position: fixed;
-    right: 0%;
-    height: 40vh;
+    right: -5%;
+    height: auto;
     top: 6.6vh;
     border-radius: 0px 0px 10px 10px;
     background-color: white;
@@ -128,7 +132,7 @@ body {
   }
   .navbar-nav li {
     padding: 0;
-    margin: 20px;
+    margin: 10px;
     opacity: 1;
   }
   .burger {
@@ -479,7 +483,7 @@ textarea:hover {
   margin-top: 5px;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 700px) {
   .input-email {
     width: 300px;
   }
